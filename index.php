@@ -6,32 +6,32 @@
 
 <?php
 //Head Banner Section
-  include ("Template/adBanner.php");
+  include ("Template/_mainBanner.php");
  ?>
 
 <?php
 //Top Sales Section
-  include "./Template/topSales.php";
+  include "./Template/_topSales.php";
 ?>
 
 <?php
 //Special Prices Section
-  include "./Template/specialPrice.php";
+  include "./Template/_specialPrice.php";
 ?>
 
 <?php
 //Ad Section
-  include "./Template/advertise.php";
+  include "./Template/_advertisement.php";
 ?>
 
 <?php
 //New Products Section
-  include "./Template/newPhones.php";
+  include "./Template/_newPhones.php";
 ?>
 
 <?php
 //Blogs Section
-  include "./Template/blogs.php";
+  include "./Template/_blogs.php";
 ?>
 
 <?php
