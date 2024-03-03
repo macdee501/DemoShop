@@ -1,5 +1,4 @@
 <?php
-$product_shuffle= $product->getProduct();
 
 //request method post
 if($_SERVER["REQUEST_METHOD"]== "POST")
