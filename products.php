@@ -8,7 +8,7 @@ include "./Template/_products.php";
 
 
 <?php
-include "./Template/topSales.php";
+include "./Template/_topSales.php";
 ?>
 
 

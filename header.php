@@ -19,6 +19,7 @@
 
     <?php
     require "./functions.php";
+    
     ?>
 
 

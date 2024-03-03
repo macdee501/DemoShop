@@ -1,10 +1,17 @@
+  <?php
+  $get_item_id = $_GET["item_id"] ?? 1;
+
+  foreach($product->getProduct()as $item):
+    if($item["item_id"] == $get_item_id):
+  ?>
+  
   <!-- Section product -->
 
   <section id="product" class="py-3">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 py-5">
-              <img src="assets/products/1.png" class="img-fluid" alt="">
+              <img src="<?php echo $item["item_image"] ?? ""; ?>" class="img-fluid" alt="">
               <div class="form-row py-4 font-size-16 font-baloo">
                 <div class="col">
                   <button type="submit" class="btn btn-danger form-control">Proceed to buy</button>
@@ -17,8 +24,8 @@
               
             </div>
             <div class="col-sm-6">
-              <h5 class="font-baloo font-size-20">Samsung Galaxy 10</h5> 
-              <small>by Samsung</small>
+              <h5 class="font-baloo font-size-20"><?php echo $item["item_name"] ?? ""; ?></h5> 
+              <small> by <?php echo $item["item_brand"] ?? ""; ?></small>
               <div class="d-flex">
                 <div class="rating text-warning font-size-12">
                   <span><i class="fas fa-star"></i></span>
@@ -38,7 +45,7 @@
                 </tr>
                 <tr class="font-rale font-size-14">
                   <td>Deal Price</td>
-                  <td class="font-size-20 text-danger">R<span>1000</span><small class="text-dark font-size-12">&nbsp;&nbsp;inclusive of all taxes</small></td>
+                  <td class="font-size-20 text-danger">R<span><?php echo $item["item_price"] ?? 0; ?></span><small class="text-dark font-size-12">&nbsp;&nbsp;inclusive of all taxes</small></td>
                 </tr>
                 <tr>
                   <td>You Save</td>
@@ -145,3 +152,8 @@
 
       </section>
       <!-- Section product -->
+
+      <?php 
+      endif;
+      endforeach;
+       ?>

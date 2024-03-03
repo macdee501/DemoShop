@@ -6,9 +6,21 @@ require "./assets/database/DBController.php";
 //Require Product class
 require "./assets/database/productDb.php";
 
+//Require Cart DB class
+require "./assets/database/cartDb.php";
+
 //Database Controller object
 $db = new DBController();
 
 //Product Controller object
 $product = new productDb($db);
 
+//Cart object
+$Cart = new cartDb($db);
+$arr=array(
+    "user_id"=>1,
+    "item_id"=>4
+
+);
+
+$Cart->insertIntoCart($arr);
